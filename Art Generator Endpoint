@@ -1,0 +1,5 @@
+app.post('/generate', (req, res) => {
+  const { style, seed } = req.body;
+  const artwork = generateArt(style, seed);
+  res.json(artwork);
+});
